@@ -1,0 +1,76 @@
+{
+ "mappings": [
+  {
+   "id": "3f5f888d-f5f2-4428-90e0-2c865c652ea3",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/catalogue/size"
+   },
+   "response": {
+    "body": "{\"size\":9,\"err\":null}\n",
+    "headers": {
+     "Content-Type": "application/json",
+     "x-wiremock": "I am a mock"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "16050914-03ee-410f-8d95-00f0130319da",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/tags"
+   },
+   "response": {
+    "body": "{\"tags\":[\"UP9\", \"WIREMOCK\", \"brown\",\"geek\",\"formal\",\"blue\",\"skin\",\"red\",\"action\",\"sport\",\"black\",\"magic\",\"green\"],\"err\":null}\n",
+    "headers": {
+     "Content-Type": "application/json",
+     "x-wiremock": "I am a mock"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "3ea2c75f-d51a-4b96-9b98-e1203b14beb4",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/catalogue"
+   },
+   "response": {
+    "bodyFileName": "resp_17.json",
+    "headers": {
+     "Content-Type": "application/json",
+     "x-wiremock": "I am a mock"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "126b1603-a8cc-475a-a109-fcbabf5de340",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/catalogue/[^/]+"
+   },
+   "response": {
+    "bodyFileName": "resp_18.json",
+    "headers": {
+     "Content-Type": "application/json",
+     "x-wiremock": "I am a mock"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  }
+ ]
+}

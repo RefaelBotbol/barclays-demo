@@ -1,0 +1,137 @@
+{
+ "_embedded": {
+  "customerOrders": [
+   {
+    "customerId": "6108f823d141f70001085456",
+    "customer": {
+     "firstName": "Refael",
+     "lastName": "Botbol Weiss",
+     "username": "Refael",
+     "addresses": [],
+     "cards": []
+    },
+    "address": {
+     "number": "asdf",
+     "street": "asdf",
+     "city": "khg",
+     "postcode": "hkg",
+     "country": "khg"
+    },
+    "card": {
+     "longNum": "123456789",
+     "expires": "1234",
+     "ccv": "12345"
+    },
+    "items": [
+     {
+      "itemId": "510a0d7e-8e83-4193-b483-e27e09ddc34d",
+      "quantity": 1,
+      "unitPrice": 15.0
+     }
+    ],
+    "shipment": {
+     "name": "6108f823d141f70001085456"
+    },
+    "date": "2021-08-19T12:31:29.356+0000",
+    "total": 19.99,
+    "_links": {
+     "self": {
+      "href": "http://orders/orders/611e4f2148b735000909f6d2"
+     },
+     "order": {
+      "href": "http://orders/orders/611e4f2148b735000909f6d2"
+     }
+    }
+   },
+   {
+    "customerId": "6108f823d141f70001085456",
+    "customer": {
+     "firstName": "Refael",
+     "lastName": "Botbol Weiss",
+     "username": "Refael",
+     "addresses": [],
+     "cards": []
+    },
+    "address": {
+     "number": "asdf",
+     "street": "asdf",
+     "city": "khg",
+     "postcode": "hkg",
+     "country": "khg"
+    },
+    "card": {
+     "longNum": "123456789",
+     "expires": "1234",
+     "ccv": "12345"
+    },
+    "items": [
+     {
+      "itemId": "510a0d7e-8e83-4193-b483-e27e09ddc34d",
+      "quantity": 1,
+      "unitPrice": 15.0
+     }
+    ],
+    "shipment": {
+     "name": "6108f823d141f70001085456"
+    },
+    "date": "2021-08-19T12:32:27.312+0000",
+    "total": 19.99,
+    "_links": {
+     "self": {
+      "href": "http://orders/orders/611e4f5b48b735000909f6d3"
+     },
+     "order": {
+      "href": "http://orders/orders/611e4f5b48b735000909f6d3"
+     }
+    }
+   },
+   {
+    "customerId": "6108f823d141f70001085456",
+    "customer": {
+     "firstName": "Refael",
+     "lastName": "Botbol Weiss",
+     "username": "Refael",
+     "addresses": [],
+     "cards": []
+    },
+    "address": {
+     "number": "asdf",
+     "street": "asdf",
+     "city": "khg",
+     "postcode": "hkg",
+     "country": "khg"
+    },
+    "card": {
+     "longNum": "123456789",
+     "expires": "1234",
+     "ccv": "12345"
+    },
+    "items": [
+     {
+      "itemId": "3395a43e-2d88-40de-b95f-e00e1502085b",
+      "quantity": 1,
+      "unitPrice": 18.0
+     }
+    ],
+    "shipment": {
+     "name": "6108f823d141f70001085456"
+    },
+    "date": "2021-08-26T19:32:34.694+0000",
+    "total": 22.99,
+    "_links": {
+     "self": {
+      "href": "http://orders/orders/6127ec5248b735000909f6d4"
+     },
+     "order": {
+      "href": "http://orders/orders/6127ec5248b735000909f6d4"
+     }
+    }
+   }
+  ]
+ },
+ "_links": {
+  "self": {
+   "href": "http://orders/orders/search/customerId?sort=date&custId=6108f823d141f70001085456"
+  }
+ }
+}

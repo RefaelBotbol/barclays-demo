@@ -1,0 +1,390 @@
+{
+ "info": {
+  "title": "http://catalogue.sock-shop - refael up9-demo-link all",
+  "version": "0.0.124"
+ },
+ "openapi": "3.1.0",
+ "paths": {
+  "/catalogue": {
+   "get": {
+    "operationId": "3ea2c75f-d51a-4b96-9b98-e1203b14beb4",
+    "parameters": [
+     {
+      "examples": [
+       "1"
+      ],
+      "in": "query",
+      "name": "page",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "5",
+       "6",
+       "3",
+       "1"
+      ],
+      "in": "query",
+      "name": "size",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "description": "Origin: GET http://catalogue.sock-shop/tags &rarr; json: $.tags[*]",
+      "examples": [
+       "brown",
+       "",
+       "blue",
+       "sport",
+       "magic"
+      ],
+      "in": "query",
+      "name": "tags",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "id"
+      ],
+      "in": "query",
+      "name": "sort",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": [
+         {
+          "count": 1,
+          "description": "Socks fit for a Messiah. You too can experience walking in water with these special edition beauties. Each hole is lovingly proggled to leave smooth edges. The only sock approved by a higher power.",
+          "id": "03fef6ac-1896-4ce8-bd69-b798f85c6e0b",
+          "imageUrl": [
+           "/catalogue/images/holy_1.jpeg",
+           "/catalogue/images/holy_2.jpeg"
+          ],
+          "name": "Holy",
+          "price": 99.99,
+          "tag": [
+           "magic",
+           "action"
+          ]
+         },
+         {
+          "count": 438,
+          "description": "proident occaecat irure et excepteur labore minim nisi amet irure",
+          "id": "3395a43e-2d88-40de-b95f-e00e1502085b",
+          "imageUrl": [
+           "/catalogue/images/colourful_socks.jpg",
+           "/catalogue/images/colourful_socks.jpg"
+          ],
+          "name": "Colourful",
+          "price": 18,
+          "tag": [
+           "blue",
+           "brown"
+          ]
+         },
+         {
+          "count": 820,
+          "description": "Ready for action. Engineers: be ready to smash that next bug! Be ready, with these super-action-sport-masterpieces. This particular engineer was chased away from the office with a stick.",
+          "id": "510a0d7e-8e83-4193-b483-e27e09ddc34d",
+          "imageUrl": [
+           "/catalogue/images/puma_1.jpeg",
+           "/catalogue/images/puma_2.jpeg"
+          ],
+          "name": "SuperSport XL",
+          "price": 15,
+          "tag": [
+           "black",
+           "sport",
+           "formal"
+          ]
+         }
+        ],
+        "schema": {
+         "anyOf": [
+          {
+           "items": {
+            "properties": {
+             "count": {
+              "type": [
+               "integer",
+               "string"
+              ]
+             },
+             "description": {
+              "type": "string"
+             },
+             "id": {
+              "type": "string"
+             },
+             "imageUrl": {
+              "items": {
+               "type": "string"
+              },
+              "type": "array"
+             },
+             "name": {
+              "type": "string"
+             },
+             "price": {
+              "type": "number"
+             },
+             "tag": {
+              "items": {
+               "type": "string"
+              },
+              "type": "array"
+             }
+            },
+            "required": [
+             "count",
+             "description",
+             "id",
+             "imageUrl",
+             "name",
+             "price",
+             "tag"
+            ],
+            "type": "object"
+           },
+           "type": "array"
+          },
+          {
+           "type": "null"
+          }
+         ]
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 3972 requests",
+    "tags": [
+     "catalogue"
+    ]
+   },
+   "parameters": []
+  },
+  "/catalogue/size": {
+   "get": {
+    "operationId": "3f5f888d-f5f2-4428-90e0-2c865c652ea3",
+    "parameters": [
+     {
+      "examples": [
+       "large",
+       "",
+       "formal"
+      ],
+      "in": "query",
+      "name": "tags",
+      "required": true,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "err": null,
+         "size": 9
+        },
+        "schema": {
+         "properties": {
+          "err": {
+           "type": "null"
+          },
+          "size": {
+           "type": "integer"
+          }
+         },
+         "required": [
+          "err",
+          "size"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 178 requests",
+    "tags": [
+     "catalogue"
+    ]
+   },
+   "parameters": []
+  },
+  "/catalogue/{id}": {
+   "get": {
+    "operationId": "126b1603-a8cc-475a-a109-fcbabf5de340",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "count": 438,
+         "description": "proident occaecat irure et excepteur labore minim nisi amet irure",
+         "id": "3395a43e-2d88-40de-b95f-e00e1502085b",
+         "imageUrl": [
+          "/catalogue/images/colourful_socks.jpg",
+          "/catalogue/images/colourful_socks.jpg"
+         ],
+         "name": "Colourful",
+         "price": 18,
+         "tag": [
+          "brown",
+          "blue"
+         ]
+        },
+        "schema": {
+         "properties": {
+          "count": {
+           "type": [
+            "integer",
+            "string"
+           ]
+          },
+          "description": {
+           "type": "string"
+          },
+          "id": {
+           "type": "string"
+          },
+          "imageUrl": {
+           "items": {
+            "type": "string"
+           },
+           "type": "array"
+          },
+          "name": {
+           "type": "string"
+          },
+          "price": {
+           "type": "number"
+          },
+          "tag": {
+           "items": {
+            "type": "string"
+           },
+           "type": "array"
+          }
+         },
+         "required": [
+          "count",
+          "description",
+          "id",
+          "imageUrl",
+          "name",
+          "price",
+          "tag"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 6560 requests",
+    "tags": [
+     "catalogue"
+    ]
+   },
+   "parameters": [
+    {
+     "description": "Origin: GET http://catalogue.sock-shop/catalogue &rarr; json: $[*].id",
+     "examples": [
+      "a0a4f044-b040-410d-8ead-4de0446aec7e",
+      "510a0d7e-8e83-4193-b483-e27e09ddc34d",
+      "d3588630-ad8e-49df-bbd7-3167f7efb246",
+      "837ab141-399e-4c1f-9abc-bace40296bac",
+      "zzz4f044-b040-410d-8ead-4de0446aec7e"
+     ],
+     "in": "path",
+     "name": "id",
+     "required": true,
+     "schema": {
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  },
+  "/tags": {
+   "get": {
+    "operationId": "16050914-03ee-410f-8d95-00f0130319da",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "err": null,
+         "tags": [
+          "brown",
+          "geek",
+          "formal",
+          "blue",
+          "skin",
+          "red",
+          "action",
+          "sport",
+          "black",
+          "magic",
+          "green"
+         ]
+        },
+        "schema": {
+         "properties": {
+          "err": {
+           "type": "null"
+          },
+          "tags": {
+           "items": {
+            "type": "string"
+           },
+           "type": "array"
+          }
+         },
+         "required": [
+          "err",
+          "tags"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 175 requests"
+   },
+   "parameters": []
+  }
+ },
+ "tags": [
+  {
+   "name": "catalogue"
+  }
+ ]
+}

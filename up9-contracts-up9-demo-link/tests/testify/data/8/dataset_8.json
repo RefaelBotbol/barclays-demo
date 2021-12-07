@@ -1,0 +1,13 @@
+{
+ "parameters": [
+  {
+   "name": "amp_cache_transform",
+   "uuid": "e5aba191-8cb9-4934-b9cb-da3cf4d4e1ee"
+  }
+ ],
+ "rows": [
+  {
+   "amp_cache_transform": "google;v=\"1..8\""
+  }
+ ]
+}

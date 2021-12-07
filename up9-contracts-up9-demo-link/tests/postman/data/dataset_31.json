@@ -1,0 +1,37 @@
+[
+ {
+  "customerId": "57a98d98e4b00679b4a830b2",
+  "x_b3_parentspanid": "f09097faa4516cc1",
+  "x_b3_spanid": "bfca4e52939385b9",
+  "x_b3_traceid": "4a1bdbc562d9e78f",
+  "x_span_name": "http:/carts/6108f823d141f70001085456/items"
+ },
+ {
+  "customerId": "eMcR85G8s63KkBc6JTL92Eyvse9tZcRE",
+  "x_b3_parentspanid": "f09097faa4516cc1",
+  "x_b3_spanid": "bfca4e52939385b9",
+  "x_b3_traceid": "4a1bdbc562d9e78f",
+  "x_span_name": "http:/carts/6108f823d141f70001085456/items"
+ },
+ {
+  "customerId": "608a02b557fae50001e7374f",
+  "x_b3_parentspanid": "f09097faa4516cc1",
+  "x_b3_spanid": "bfca4e52939385b9",
+  "x_b3_traceid": "4a1bdbc562d9e78f",
+  "x_span_name": "http:/carts/6108f823d141f70001085456/items"
+ },
+ {
+  "customerId": "Q_Hg5qd9LICyNwJrJ9GVZApvJ6uCWaxL",
+  "x_b3_parentspanid": "f09097faa4516cc1",
+  "x_b3_spanid": "bfca4e52939385b9",
+  "x_b3_traceid": "4a1bdbc562d9e78f",
+  "x_span_name": "http:/carts/6108f823d141f70001085456/items"
+ },
+ {
+  "customerId": "7s3-VSb9aEjl5cai6cc0LhedB4_2dZdf",
+  "x_b3_parentspanid": "f09097faa4516cc1",
+  "x_b3_spanid": "bfca4e52939385b9",
+  "x_b3_traceid": "4a1bdbc562d9e78f",
+  "x_span_name": "http:/carts/6108f823d141f70001085456/items"
+ }
+]

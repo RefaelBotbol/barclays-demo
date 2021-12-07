@@ -1,0 +1,106 @@
+{
+ "parameters": [
+  {
+   "name": "amp_cache_transform",
+   "uuid": "8b9f308d-143b-4fb9-b308-fae0a5caa3b0"
+  },
+  {
+   "name": "content",
+   "uuid": "493e4ee1-3d37-4bb0-8912-efc09c1406d3"
+  },
+  {
+   "name": "keep_alive",
+   "uuid": "2b674a29-8bb3-42ba-860f-8a4cd9453485"
+  },
+  {
+   "name": "param",
+   "uuid": "c880e99a-0898-4b93-9f5b-b544d708fca3"
+  },
+  {
+   "name": "postman_token",
+   "uuid": "4e8a717b-89c8-4588-b170-aa57ef7fcf6c"
+  },
+  {
+   "name": "r",
+   "uuid": "c2079d79-7c17-4f59-a61b-71474468d218"
+  },
+  {
+   "name": "s",
+   "uuid": "b0729491-48c4-4a5e-84a4-4dde74058586"
+  },
+  {
+   "name": "vars_0_",
+   "uuid": "68519bd2-18eb-4fa7-93a7-a0318ac36d86"
+  },
+  {
+   "name": "x_datadog_parent_id",
+   "uuid": "44691331-6993-45b0-8999-823c1957b5fb"
+  },
+  {
+   "name": "x_datadog_trace_id",
+   "uuid": "0caf7c4a-ecab-498a-a63f-b16022be2ecf"
+  }
+ ],
+ "rows": [
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "keep_alive": "300",
+   "param": "PHPE9568F36-D428-11d2-A769-00AA001ACF42",
+   "postman_token": "faf84c5a-f7df-48d7-95e9-bec9b527a438",
+   "r": "0.01231231230",
+   "s": "/Index/\\think\\app/invokefunction",
+   "vars_0_": "md5",
+   "x_datadog_parent_id": "17224552442365752148",
+   "x_datadog_trace_id": "2873245079675921149"
+  },
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "keep_alive": "300",
+   "param": "PHPE9568F36-D428-11d2-A769-00AA001ACF42",
+   "postman_token": "faf84c5a-f7df-48d7-95e9-bec9b527a438",
+   "r": "0.01231231230",
+   "s": "/Index/\\think\\app/invokefunction",
+   "vars_0_": "__HelloThinkPHP",
+   "x_datadog_parent_id": "17224552442365752148",
+   "x_datadog_trace_id": "2873245079675921149"
+  },
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "keep_alive": "300",
+   "param": "PHPE9568F36-D428-11d2-A769-00AA001ACF42",
+   "postman_token": "faf84c5a-f7df-48d7-95e9-bec9b527a438",
+   "r": "0.01231231230",
+   "s": "/Index/\\think\\app/invokefunction",
+   "vars_0_": "x4KNnCMm",
+   "x_datadog_parent_id": "17224552442365752148",
+   "x_datadog_trace_id": "2873245079675921149"
+  },
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "keep_alive": "300",
+   "param": "PHPE9568F36-D428-11d2-A769-00AA001ACF42",
+   "postman_token": "faf84c5a-f7df-48d7-95e9-bec9b527a438",
+   "r": "0.01231231230",
+   "s": "/Index/\\think\\app/invokefunction",
+   "vars_0_": "ra60CskQ",
+   "x_datadog_parent_id": "17224552442365752148",
+   "x_datadog_trace_id": "2873245079675921149"
+  },
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "content": "<php>die(@md5(HelloThinkCMF))</php>",
+   "keep_alive": "300",
+   "param": "PHPE9568F36-D428-11d2-A769-00AA001ACF42",
+   "postman_token": "faf84c5a-f7df-48d7-95e9-bec9b527a438",
+   "r": "0.01231231230",
+   "s": "/Index/\\think\\app/invokefunction",
+   "vars_0_": "tMeGL0pH",
+   "x_datadog_parent_id": "11614822681289147485",
+   "x_datadog_trace_id": "15469798019589103194"
+  }
+ ]
+}

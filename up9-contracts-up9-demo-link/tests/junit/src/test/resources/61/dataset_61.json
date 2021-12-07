@@ -1,0 +1,18 @@
+{
+ "parameters": [
+  {
+   "name": "amp_cache_transform",
+   "uuid": "7c1572df-7790-47f1-89d7-45f10b759cd2"
+  },
+  {
+   "name": "postman_token",
+   "uuid": "107c6bc0-a6d1-46fd-a3a8-95a1c6530254"
+  }
+ ],
+ "rows": [
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "postman_token": "ec81d93d-c901-406c-b327-7377fba3daed"
+  }
+ ]
+}

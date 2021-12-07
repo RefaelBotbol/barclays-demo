@@ -1,0 +1,7 @@
+{
+ "city": "{{city}}",
+ "country": "{{country}}",
+ "number": "{{number}}",
+ "postcode": "{{postcode}}",
+ "street": "{{street}}"
+}

@@ -1,0 +1,61 @@
+{
+ "parameters": [
+  {
+   "name": "customerId",
+   "uuid": "231e2b27-2007-435e-94c2-56d5d76a1694"
+  },
+  {
+   "name": "x_b3_parentspanid",
+   "uuid": "0b8b2cb6-3599-4570-8f1e-47282b8e61b7"
+  },
+  {
+   "name": "x_b3_spanid",
+   "uuid": "be2c4a34-78cc-4780-b038-1f834d4ab9cf"
+  },
+  {
+   "name": "x_b3_traceid",
+   "uuid": "9eb6b162-1dd8-4178-89e9-83f6538d8d02"
+  },
+  {
+   "name": "x_span_name",
+   "uuid": "418059e3-e35f-46dd-bea8-c584fb673320"
+  }
+ ],
+ "rows": [
+  {
+   "customerId": "57a98d98e4b00679b4a830b2",
+   "x_b3_parentspanid": "135f6256a4593637",
+   "x_b3_spanid": "02cda9367e845413",
+   "x_b3_traceid": "4a1bdbc562d9e78f",
+   "x_span_name": "http:/customers/57a98d98e4b00679b4a830b2"
+  },
+  {
+   "customerId": "57a98d98e4b00679b4a830b2",
+   "x_b3_parentspanid": "135f6256a4593637",
+   "x_b3_spanid": "02cda9367e845413",
+   "x_b3_traceid": "4a1bdbc562d9e78f",
+   "x_span_name": "http:/customers/6108f823d141f70001085456"
+  },
+  {
+   "customerId": "57a98d98e4b00679b4a830b2",
+   "x_b3_parentspanid": "135f6256a4593637",
+   "x_b3_spanid": "02cda9367e845413",
+   "x_b3_traceid": "4a1bdbc562d9e78f",
+   "x_span_name": "http:/customers/6131516f7c73880001e90ae3"
+  },
+  {
+   "customerId": "57a98d98e4b00679b4a830b2",
+   "x_b3_parentspanid": "135f6256a4593637",
+   "x_b3_spanid": "02cda9367e845413",
+   "x_b3_traceid": "4a1bdbc562d9e78f",
+   "x_span_name": "http:/customers/6137e88c7c73880001e90ae7"
+  },
+  {
+   "customerId": "57a98d98e4b00679b4a830b2",
+   "x_b3_parentspanid": "7339bfad929e5b67",
+   "x_b3_spanid": "f90e4bb854296b91",
+   "x_b3_traceid": "1a7016ef43c58069",
+   "x_span_name": "http:/customers/61aa8ca40cb8f60001d7a805"
+  }
+ ]
+}

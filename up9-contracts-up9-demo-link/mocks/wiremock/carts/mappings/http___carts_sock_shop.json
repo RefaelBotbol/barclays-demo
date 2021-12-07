@@ -1,0 +1,145 @@
+{
+ "mappings": [
+  {
+   "id": "c3f990fa-3693-4001-87e7-e030ac406430",
+   "request": {
+    "method": "DELETE",
+    "urlPathPattern": "/carts/[^/]+"
+   },
+   "response": {
+    "body": "",
+    "headers": {
+        "x-wiremock": "I am a mock"
+    },
+    "status": 202,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "17301d10-8a0b-44dc-ad69-586b6cf27c5f",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/carts/[^/]+/items"
+   },
+   "response": {
+    "body": "{\n \"id\": \"6088642c5625c30007827ca2\",\n \"itemId\": \"{{jsonPath request.body '$.itemId'}}\",\n \"quantity\": 1,\n \"unitPrice\": {{jsonPath request.body '$.unitPrice'}}\n}",
+    "headers": {
+     "Content-Type": "application/json",
+     "x-wiremock": "I am a mock"
+    },
+    "status": 201,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "fe9b8799-bd6b-4e32-b182-c84801dccb2b",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/carts/[^/]+/merge"
+   },
+   "response": {
+    "body": "",
+    "headers": {
+        "x-wiremock": "I am a mock"
+    },
+    "status": 202,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "68584996-815d-40f2-a5cf-8f059b11be80",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/carts/[^/]+/items"
+   },
+   "response": {
+    "body": "[]",
+    "headers": {
+     "Content-Type": "application/json",
+     "x-wiremock": "I am a mock"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "d7e03019-4998-4dbb-8193-6b79ead57add",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/carts/[^/]+/merge"
+   },
+   "response": {
+    "body": "",
+    "headers": {
+     "Content-Type": "text/html",
+     "x-wiremock": "I am a mock"
+    },
+    "status": 202,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "b8eefa36-7e77-4da0-bb55-c9e86a455b47",
+   "request": {
+    "method": "DELETE",
+    "urlPathPattern": "/carts/[^/]+/items/[^/]+"
+   },
+   "response": {
+    "body": "",
+    "headers": {
+        "x-wiremock": "I am a mock"
+    },
+    "status": 202,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "867556f7-0f89-4a5c-92da-a6d384b22fb3",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/carts/xGsbdrPaoqfokjGLQgckj33LqFFZhSTL/items"
+   },
+   "response": {
+    "body": "[]",
+    "headers": {
+     "Content-Type": "application/json",
+     "x-wiremock": "I am a mock"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "6299a8f7-f930-433d-b688-905294b4552d",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/carts/xGsbdrPaoqfokjGLQgckj33LqFFZhSTL/items"
+   },
+   "response": {
+    "body": "{\n \"id\": \"61ab70c327786000071a8066\",\n \"itemId\": \"{{jsonPath request.body '$.itemId'}}\",\n \"quantity\": 1,\n \"unitPrice\": {{jsonPath request.body '$.unitPrice'}}\n}",
+    "headers": {
+     "Content-Type": "application/json",
+     "x-wiremock": "I am a mock"
+    },
+    "status": 201,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  }
+ ]
+}

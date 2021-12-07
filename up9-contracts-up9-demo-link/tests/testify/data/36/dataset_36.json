@@ -1,0 +1,33 @@
+{
+ "parameters": [
+  {
+   "name": "amp_cache_transform",
+   "uuid": "7617025f-5f62-4602-b6a5-e4c0f13356c5"
+  },
+  {
+   "name": "postman_token",
+   "uuid": "6e6617c5-85ea-40d9-9d2c-fb0de481ce7b"
+  },
+  {
+   "name": "tags",
+   "uuid": "4771f41b-a0f9-404d-895c-bb4a98644586"
+  }
+ ],
+ "rows": [
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "postman_token": "993eaf1c-8641-45a9-a38f-29cb3cd0f083",
+   "tags": ""
+  },
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "postman_token": "993eaf1c-8641-45a9-a38f-29cb3cd0f083",
+   "tags": "large"
+  },
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "postman_token": "2cdff1e0-66e7-42c7-a08a-800917b9f12a",
+   "tags": "formal"
+  }
+ ]
+}

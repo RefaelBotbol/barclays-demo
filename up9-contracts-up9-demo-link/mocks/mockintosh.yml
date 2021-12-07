@@ -1,0 +1,683 @@
+# This is a Mockintosh configuration file.
+# Mockintosh provides a microservices friendly, small footprint HTTP mock service.
+# A standard laptop can run dozens of Mockintosh instances, or you can run all instances in a single Docker container.
+#
+# Install Mockintosh:                 pip3 install mockintosh
+# Run locally:                        mockintosh <this-file>
+# Run with Docker:                    docker run -it -p 8000-8005:8000-8005 -v `pwd`:/tmp testrio/mockintosh /tmp/<this-file>
+# More information can be found here: https://github.com/up9inc/mockintosh
+
+---
+management:
+  port: 8000
+services:
+- name: http://carts.sock-shop
+  port: 8001
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___carts.sock-shop-spec.json'
+  endpoints:
+  - path: /carts/{{customerId}}
+    response:
+      status: 202
+    method: delete
+  - path: /carts/{{customerId}}/items
+    response:
+      status: 201
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "id": "6088642c5625c30007827ca2",
+         "itemId": "{{jsonPath request.json '$.itemId'}}",
+         "quantity": 1,
+         "unitPrice": {{jsonPath request.json '$.unitPrice'}}
+        }
+    method: post
+  - path: /carts/{{customerId}}/merge
+    response:
+      status: 202
+  - path: /carts/{{customerId}}/items
+    response:
+      headers:
+        Content-Type: application/json
+      body: '[]'
+  - path: /carts/{{customerId}}/merge
+    response:
+      status: 202
+      headers:
+        Content-Type: text/html
+  - path: /carts/{{customerId}}/items/{{itemId}}
+    response:
+      status: 202
+    method: delete
+  - path: /carts/xGsbdrPaoqfokjGLQgckj33LqFFZhSTL/items
+    response:
+      headers:
+        Content-Type: application/json
+      body: '[]'
+      useTemplating: false
+  - path: /carts/xGsbdrPaoqfokjGLQgckj33LqFFZhSTL/items
+    response:
+      status: 201
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "id": "61ab70c327786000071a8066",
+         "itemId": "{{jsonPath request.json '$.itemId'}}",
+         "quantity": 1,
+         "unitPrice": {{jsonPath request.json '$.unitPrice'}}
+        }
+    method: post
+- name: http://catalogue.sock-shop
+  port: 8002
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___catalogue.sock-shop-spec.json'
+  endpoints:
+  - path: /catalogue
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_catalogue_sock_shop_17.json'
+  - path: /catalogue/{{id}}
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_catalogue_sock_shop_18.json'
+  - path: /catalogue/size
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "size": 9,
+         "err": null
+        }
+      useTemplating: false
+  - path: /tags
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "tags": [
+          "brown",
+          "geek",
+          "formal",
+          "blue",
+          "skin",
+          "red",
+          "action",
+          "sport",
+          "black",
+          "magic",
+          "green"
+         ],
+         "err": null
+        }
+      useTemplating: false
+- name: http://front-end.sock-shop
+  port: 8003
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___front-end.sock-shop-spec.json'
+  endpoints:
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_1.html'
+      useTemplating: false
+  - path: /basket.html
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_8.html'
+      useTemplating: false
+  - path: /cart
+    response:
+      status: 201
+    method: post
+  - path: /cart
+    response:
+      status: 202
+    method: delete
+  - path: /catalogue
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_front_end_sock_shop_11.json'
+  - path: /category.html
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_12.html'
+      useTemplating: false
+  - path: /detail.html
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_13.html'
+      useTemplating: false
+  - path: /login
+    response:
+      headers:
+        Content-Type: text/html
+      body: Cookie is set
+      useTemplating: false
+  - path: /cart
+    response:
+      headers:
+        Content-Type: application/json
+      body: '[]'
+      useTemplating: false
+  - path: /catalogue/size
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "size": 9,
+         "err": null
+        }
+      useTemplating: false
+  - path: /footer.html
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_39.html'
+      useTemplating: false
+  - path: /{{param}}
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_40.html'
+      useTemplating: false
+  - path: /tags
+    response: {}
+  - path: /topbar.html
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_42.html'
+      useTemplating: false
+  - path: /address
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "status_code": 500
+        }
+      useTemplating: false
+  - path: /card
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "status_code": 500
+        }
+      useTemplating: false
+  - path: /catalogue/{{id}}
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_front_end_sock_shop_56.json'
+  - path: /customer-order.html
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_60.html'
+      useTemplating: false
+  - path: /customer-orders.html
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_61.html'
+      useTemplating: false
+  - path: /customers/{{customerId}}
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_front_end_sock_shop_62.json'
+      useTemplating: false
+  - path: /index.html
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_64.html'
+      useTemplating: false
+  - path: /orders
+    response:
+      status: 201
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_front_end_sock_shop_67.json'
+      useTemplating: false
+    method: post
+  - path: /orders
+    response:
+      status: 201
+      headers:
+        Content-Type: application/json
+      body: '[]'
+      useTemplating: false
+  - path: /orders/{{id}}
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_front_end_sock_shop_69.json'
+      useTemplating: false
+  - path: /register
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "id": "608a02b557fae50001e7374f"
+        }
+      useTemplating: false
+    method: post
+  - path: /tags
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "tags": [
+          "brown",
+          "geek",
+          "formal",
+          "blue",
+          "skin",
+          "red",
+          "action",
+          "sport",
+          "black",
+          "magic",
+          "green"
+         ],
+         "err": null
+        }
+      useTemplating: false
+  - path: /
+    response:
+      status: 206
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_102.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_125.html'
+      useTemplating: false
+  - path: /cart/{{itemId}}
+    response:
+      status: 202
+    method: delete
+  - path: /addresses
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "id": "608aba9e57fae50001e73758"
+        }
+      useTemplating: false
+    method: post
+  - path: /cards
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "id": "608abaac57fae50001e7375b"
+        }
+      useTemplating: false
+    method: post
+  - path: /cart
+    response:
+      status: 202
+    method: delete
+  - path: /orders
+    response:
+      status: 201
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_front_end_sock_shop_186.json'
+      useTemplating: false
+    method: post
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_187.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_190.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+    method: head
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_192.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_193.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_194.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_195.html'
+      useTemplating: false
+  - path: /catalogue
+    response:
+      body: External template file 'mock-data/resp_17.json' couldn't be accessed or found!
+      useTemplating: false
+  - path: /catalogue/size
+    response:
+      body: External template file 'mock-data/resp_18.json' couldn't be accessed or found!
+      useTemplating: false
+  - path: /catalogue
+    response:
+      headers:
+        Content-Type: text/plain
+      body: '@mock-data/resp_front_end_sock_shop_206.txt'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_207.html'
+      useTemplating: false
+  - path: /wp-includes/wlwmanifest.xml
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_209.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_211.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_212.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_213.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_214.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_215.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_216.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_218.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_219.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_220.html'
+      useTemplating: false
+  - path: /customers
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_front_end_sock_shop_224.json'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_225.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_227.html'
+      useTemplating: false
+  - path: /cart/update
+    response:
+      status: 202
+    method: post
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_235.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_236.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_237.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_238.html'
+      useTemplating: false
+  - path: /ipinfo.io
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_240.html'
+      useTemplating: false
+  - path: /
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_241.html'
+      useTemplating: false
+  - path: /category.html
+    response:
+      status: 206
+      headers:
+        Content-Type: text/html
+      body: ''
+      useTemplating: false
+  - path: /www.99syn.com/index.html
+    response:
+      headers:
+        Content-Type: text/html
+      body: '@mock-data/resp_front_end_sock_shop_243.html'
+      useTemplating: false
+- name: http://orders.sock-shop
+  port: 8004
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___orders.sock-shop-spec.json'
+  endpoints:
+  - path: /orders
+    response:
+      status: 201
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_orders_sock_shop_26.json'
+    method: post
+  - path: /orders/{{id}}
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_orders_sock_shop_87.json'
+      useTemplating: false
+  - path: /orders/search/customerId
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_orders_sock_shop_88.json'
+      useTemplating: false
+- name: http://payment.sock-shop
+  port: 8005
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___payment.sock-shop-spec.json'
+  endpoints:
+  - path: /paymentAuth
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "authorised": true,
+         "message": "Payment authorised"
+        }
+      useTemplating: false
+    method: post
+- name: http://shipping.sock-shop
+  port: 8006
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___shipping.sock-shop-spec.json'
+  endpoints:
+  - path: /shipping
+    response:
+      status: 201
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "id": "{{jsonPath request.json '$.id'}}",
+         "name": "{{jsonPath request.json '$.name'}}"
+        }
+    method: post
+- name: http://user.sock-shop
+  port: 8007
+  managementRoot: __admin
+  oas: '@mock-data/up9-http___user.sock-shop-spec.json'
+  endpoints:
+  - path: /customers/{{customerId}}
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_user_sock_shop_19.json'
+  - path: /customers/{{customerId}}/addresses
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_user_sock_shop_20.json'
+      useTemplating: false
+  - path: /customers/{{customerId}}/cards
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_user_sock_shop_21.json'
+      useTemplating: false
+  - path: /login
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_user_sock_shop_22.json'
+      useTemplating: false
+  - path: /addresses/{{addresseId}}
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_user_sock_shop_28.json'
+  - path: /cards/{{cardId}}
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_user_sock_shop_29.json'
+  - path: /register
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "id": "608a02b557fae50001e7374f"
+        }
+      useTemplating: false
+    method: post
+  - path: /addresses
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "id": "608aba9e57fae50001e73758"
+        }
+      useTemplating: false
+    method: post
+  - path: /cards
+    response:
+      headers:
+        Content-Type: application/json
+      body: |-
+        {
+         "id": "608abaac57fae50001e7375b"
+        }
+      useTemplating: false
+    method: post
+  - path: /customers
+    response:
+      headers:
+        Content-Type: application/json
+      body: '@mock-data/resp_user_sock_shop_222.json'
+      useTemplating: false
+- name: kafka://kafka
+  type: kafka
+  address: localhost:9092
+  actors:
+  - produce:
+      queue: shipping-task
+      value: '{"id":"048d8004-e5f0-41e5-99a4-00c6beb0aa25","name":"57a98d98e4b00679b4a830b2"}'
+  - produce:
+      queue: shipping-task
+      value: send

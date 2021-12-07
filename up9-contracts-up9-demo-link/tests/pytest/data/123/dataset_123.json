@@ -1,0 +1,34 @@
+{
+ "parameters": [
+  {
+   "name": "customerId",
+   "uuid": "a8f1d167-b0b2-447c-bf40-4b89ac699e4d"
+  },
+  {
+   "name": "sessionId",
+   "uuid": "1be67390-23d9-458b-9c77-5f6290456a1d"
+  }
+ ],
+ "rows": [
+  {
+   "customerId": "57a98d98e4b00679b4a830b2",
+   "sessionId": "_iQUoVO9jag6T-jzSfhHPIrU5YiQct5s"
+  },
+  {
+   "customerId": "eMcR85G8s63KkBc6JTL92Eyvse9tZcRE",
+   "sessionId": "_iQUoVO9jag6T-jzSfhHPIrU5YiQct5s"
+  },
+  {
+   "customerId": "608a02b557fae50001e7374f",
+   "sessionId": "_iQUoVO9jag6T-jzSfhHPIrU5YiQct5s"
+  },
+  {
+   "customerId": "Q_Hg5qd9LICyNwJrJ9GVZApvJ6uCWaxL",
+   "sessionId": "_iQUoVO9jag6T-jzSfhHPIrU5YiQct5s"
+  },
+  {
+   "customerId": "7s3-VSb9aEjl5cai6cc0LhedB4_2dZdf",
+   "sessionId": "_iQUoVO9jag6T-jzSfhHPIrU5YiQct5s"
+  }
+ ]
+}

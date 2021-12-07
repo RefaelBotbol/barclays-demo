@@ -1,0 +1,22 @@
+{
+ "parameters": [
+  {
+   "name": "amp_cache_transform",
+   "uuid": "a5e4b2af-9cdf-4ce6-8cfa-a9f2c596f61f"
+  },
+  {
+   "name": "tags",
+   "uuid": "e33ce5cd-0e0b-4c19-9256-5e12c5457f07"
+  }
+ ],
+ "rows": [
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "tags": "large"
+  },
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "tags": "formal"
+  }
+ ]
+}

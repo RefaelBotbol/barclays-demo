@@ -1,0 +1,39 @@
+{
+  "services": [
+    {
+      "port": 8000,
+      "name": "Carts",
+      "rootDir": "carts"
+    },
+    {
+      "port": 8001,
+      "name": "Catalogue",
+      "rootDir": "catalogue"
+    },
+    {
+      "port": 8002,
+      "name": "Front end",
+      "rootDir": "front_end"
+    },
+    {
+      "port": 8003,
+      "name": "Orders",
+      "rootDir": "orders"
+    },
+    {
+      "port": 8004,
+      "name": "Payment",
+      "rootDir": "payment"
+    },
+    {
+      "port": 8005,
+      "name": "Shipping",
+      "rootDir": "shipping"
+    },
+    {
+      "port": 8006,
+      "name": "User",
+      "rootDir": "user"
+    }
+  ]
+}

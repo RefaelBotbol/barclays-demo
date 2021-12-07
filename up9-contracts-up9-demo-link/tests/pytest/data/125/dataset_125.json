@@ -1,0 +1,13 @@
+{
+ "parameters": [
+  {
+   "name": "content",
+   "uuid": "e5d278ca-63c3-4316-8a9a-ec837e408592"
+  }
+ ],
+ "rows": [
+  {
+   "content": "<php>die(@md5(HelloThinkCMF))</php>"
+  }
+ ]
+}

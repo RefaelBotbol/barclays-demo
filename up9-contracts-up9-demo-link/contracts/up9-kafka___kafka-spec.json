@@ -1,0 +1,45 @@
+{
+ "info": {
+  "title": "kafka://kafka - refael up9-demo-link all",
+  "version": "0.0.124"
+ },
+ "openapi": "3.1.0",
+ "paths": {
+  "/shipping-task": {
+   "parameters": [],
+   "put": {
+    "operationId": "c56c248c-57b4-4560-9c97-7bb4edc85863",
+    "parameters": [],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "properties": {
+         "id": {
+          "type": "string"
+         },
+         "name": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "id",
+         "name"
+        ],
+        "type": "object"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "202": {
+      "description": "Accepted"
+     }
+    },
+    "summary": "Seen 755 requests"
+   }
+  }
+ },
+ "tags": []
+}

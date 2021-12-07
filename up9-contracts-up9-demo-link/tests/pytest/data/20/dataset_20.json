@@ -1,0 +1,13 @@
+{
+ "parameters": [
+  {
+   "name": "customerId",
+   "uuid": "231e2b27-2007-435e-94c2-56d5d76a1694"
+  }
+ ],
+ "rows": [
+  {
+   "customerId": "57a98d98e4b00679b4a830b2"
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "mappings": [
+  {
+   "id": "014f3eac-30fe-4f28-977f-020b093b0192",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/customers/[^/]+"
+   },
+   "response": {
+    "bodyFileName": "resp_19.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "2b94734d-1675-43a2-b3d6-a5bb7069f094",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/customers/[^/]+/addresses"
+   },
+   "response": {
+    "bodyFileName": "resp_20.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "efa2c341-3cb8-4710-a575-93f6eccff110",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/customers/[^/]+/cards"
+   },
+   "response": {
+    "body": "{\"_embedded\":{\"card\":[{\"longNum\":\"5544154011345918\",\"expires\":\"08/19\",\"ccv\":\"958\",\"id\":\"57a98d98e4b00679b4a830b1\",\"_links\":{\"card\":{\"href\":\"http://user/cards/57a98d98e4b00679b4a830b1\"},\"self\":{\"href\":\"http://user/cards/57a98d98e4b00679b4a830b1\"}}}]}}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "1f3181e1-758a-4ecc-a6b0-52a465a1fe71",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/login"
+   },
+   "response": {
+    "bodyFileName": "resp_22.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "9ca0c7dd-d21b-46a3-a732-4f6e466ce7d2",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/addresses/[^/]+"
+   },
+   "response": {
+    "bodyFileName": "resp_28.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "cbf8a8f7-ae12-4235-b538-753b02d1513a",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/cards/[^/]+"
+   },
+   "response": {
+    "body": "{\n \"longNum\": \"5544154011345918\",\n \"expires\": \"08/19\",\n \"ccv\": \"958\",\n \"id\": \"{{request.pathSegments.[2]}}\",\n \"_links\": {\n  \"card\": {\n   \"href\": \"http://user/cards/57a98d98e4b00679b4a830b1\"\n  },\n  \"self\": {\n   \"href\": \"http://user/cards/57a98d98e4b00679b4a830b1\"\n  }\n }\n}",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "c35daf06-96b9-49fc-a0d8-ecf0e3ff36b9",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/register"
+   },
+   "response": {
+    "body": "{\"id\":\"608a02b557fae50001e7374f\"}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "e7d7f15f-95d6-4ce1-94e0-47df1bc72044",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/addresses"
+   },
+   "response": {
+    "body": "{\"id\":\"608aba9e57fae50001e73758\"}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "e5d1ce6a-0679-400c-9296-730896b22467",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/cards"
+   },
+   "response": {
+    "body": "{\"id\":\"608abaac57fae50001e7375b\"}\n",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "2c97ffcb-a701-41f6-a679-4a092a98a792",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/customers"
+   },
+   "response": {
+    "bodyFileName": "resp_222.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  }
+ ]
+}

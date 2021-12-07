@@ -1,0 +1,1417 @@
+{
+ "info": {
+  "title": "http://user.sock-shop - refael up9-demo-link all",
+  "version": "0.0.124"
+ },
+ "openapi": "3.1.0",
+ "paths": {
+  "/addresses": {
+   "parameters": [],
+   "post": {
+    "operationId": "e7d7f15f-95d6-4ce1-94e0-47df1bc72044",
+    "parameters": [
+     {
+      "examples": [
+       "application/json"
+      ],
+      "in": "header",
+      "name": "accept",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "properties": {
+         "city": {
+          "type": "string"
+         },
+         "country": {
+          "type": "string"
+         },
+         "number": {
+          "type": "string"
+         },
+         "postcode": {
+          "type": "string"
+         },
+         "street": {
+          "type": "string"
+         },
+         "userID": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "city",
+         "country",
+         "number",
+         "postcode",
+         "street"
+        ],
+        "type": "object"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "id": "608aba9e57fae50001e73758"
+        },
+        "schema": {
+         "properties": {
+          "id": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "id"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 6 requests",
+    "tags": [
+     "addresses"
+    ]
+   }
+  },
+  "/addresses/{addresseId}": {
+   "get": {
+    "operationId": "9ca0c7dd-d21b-46a3-a732-4f6e466ce7d2",
+    "parameters": [
+     {
+      "examples": [
+       "application/hal+json"
+      ],
+      "in": "header",
+      "name": "accept",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "a9a90322cc35d982",
+       "fd5691beb369563b"
+      ],
+      "in": "header",
+      "name": "x-b3-parentspanid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "1"
+      ],
+      "in": "header",
+      "name": "x-b3-sampled",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "6ba3a8f57336deb5",
+       "3cae8b7ec83e5e7a"
+      ],
+      "in": "header",
+      "name": "x-b3-spanid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "4a1bdbc562d9e78f",
+       "1a7016ef43c58069"
+      ],
+      "in": "header",
+      "name": "x-b3-traceid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "http:/addresses/6108f842d141f70001085457",
+       "http:/addresses/57a98d98e4b00679b4a830b0",
+       "http:/addresses/6131519a7c73880001e90ae4",
+       "http:/addresses/6137e8bd7c73880001e90ae8",
+       "http:/addresses/61aa8ce10cb8f60001d7a806"
+      ],
+      "in": "header",
+      "name": "x-span-name",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "_links": {
+          "address": {
+           "href": "http://user/addresses/57a98d98e4b00679b4a830b0"
+          },
+          "self": {
+           "href": "http://user/addresses/57a98d98e4b00679b4a830b0"
+          }
+         },
+         "city": "Glasgow",
+         "country": "United Kingdom",
+         "id": "57a98d98e4b00679b4a830b0",
+         "number": "246",
+         "postcode": "G67 3DL",
+         "street": "Whitelees Road"
+        },
+        "schema": {
+         "properties": {
+          "_links": {
+           "properties": {
+            "address": {
+             "properties": {
+              "href": {
+               "type": "string"
+              }
+             },
+             "required": [
+              "href"
+             ],
+             "type": "object"
+            },
+            "self": {
+             "properties": {
+              "href": {
+               "type": "string"
+              }
+             },
+             "required": [
+              "href"
+             ],
+             "type": "object"
+            }
+           },
+           "required": [
+            "address",
+            "self"
+           ],
+           "type": "object"
+          },
+          "city": {
+           "type": "string"
+          },
+          "country": {
+           "type": "string"
+          },
+          "id": {
+           "type": "string"
+          },
+          "number": {
+           "type": "string"
+          },
+          "postcode": {
+           "type": "string"
+          },
+          "street": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "_links",
+          "city",
+          "country",
+          "id",
+          "number",
+          "postcode",
+          "street"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 357 requests",
+    "tags": [
+     "addresses"
+    ]
+   },
+   "parameters": [
+    {
+     "examples": [
+      "57a98d98e4b00679b4a830b0",
+      "608aba9e57fae50001e73758",
+      "60eaaab447c8f40001732ac4",
+      "60ffec3047c8f40001732ac7",
+      "6108f842d141f70001085457"
+     ],
+     "in": "path",
+     "name": "addresseId",
+     "required": true,
+     "schema": {
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  },
+  "/cards": {
+   "parameters": [],
+   "post": {
+    "operationId": "e5d1ce6a-0679-400c-9296-730896b22467",
+    "parameters": [
+     {
+      "examples": [
+       "application/json"
+      ],
+      "in": "header",
+      "name": "accept",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "properties": {
+         "ccv": {
+          "type": "string"
+         },
+         "expires": {
+          "type": "string"
+         },
+         "longNum": {
+          "type": "string"
+         },
+         "userID": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "ccv",
+         "expires",
+         "longNum"
+        ],
+        "type": "object"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "id": "608abaac57fae50001e7375b"
+        },
+        "schema": {
+         "properties": {
+          "id": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "id"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 10 requests",
+    "tags": [
+     "cards"
+    ]
+   }
+  },
+  "/cards/{cardId}": {
+   "get": {
+    "operationId": "cbf8a8f7-ae12-4235-b538-753b02d1513a",
+    "parameters": [
+     {
+      "examples": [
+       "application/hal+json"
+      ],
+      "in": "header",
+      "name": "accept",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "2a1ab3f38c896e3e",
+       "2eb4e24b790af75c"
+      ],
+      "in": "header",
+      "name": "x-b3-parentspanid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "1"
+      ],
+      "in": "header",
+      "name": "x-b3-sampled",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "1b91b90dec57fdfe",
+       "2afd96808f3d9956"
+      ],
+      "in": "header",
+      "name": "x-b3-spanid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "4a1bdbc562d9e78f",
+       "1a7016ef43c58069"
+      ],
+      "in": "header",
+      "name": "x-b3-traceid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "http:/cards/6108f850d141f70001085458",
+       "http:/cards/57a98d98e4b00679b4a830b1",
+       "http:/cards/613151b07c73880001e90ae5",
+       "http:/cards/6137e8ca7c73880001e90ae9",
+       "http:/cards/61aa8d470cb8f60001d7a807"
+      ],
+      "in": "header",
+      "name": "x-span-name",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "_links": {
+          "card": {
+           "href": "http://user/cards/57a98d98e4b00679b4a830b1"
+          },
+          "self": {
+           "href": "http://user/cards/57a98d98e4b00679b4a830b1"
+          }
+         },
+         "ccv": "958",
+         "expires": "08/19",
+         "id": "57a98d98e4b00679b4a830b1",
+         "longNum": "5544154011345918"
+        },
+        "schema": {
+         "properties": {
+          "_links": {
+           "properties": {
+            "card": {
+             "properties": {
+              "href": {
+               "type": "string"
+              }
+             },
+             "required": [
+              "href"
+             ],
+             "type": "object"
+            },
+            "self": {
+             "properties": {
+              "href": {
+               "type": "string"
+              }
+             },
+             "required": [
+              "href"
+             ],
+             "type": "object"
+            }
+           },
+           "required": [
+            "card",
+            "self"
+           ],
+           "type": "object"
+          },
+          "ccv": {
+           "type": "string"
+          },
+          "expires": {
+           "type": "string"
+          },
+          "id": {
+           "type": "string"
+          },
+          "longNum": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "_links",
+          "ccv",
+          "expires",
+          "id",
+          "longNum"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 356 requests",
+    "tags": [
+     "cards"
+    ]
+   },
+   "parameters": [
+    {
+     "examples": [
+      "57a98d98e4b00679b4a830b1",
+      "608abaac57fae50001e7375b",
+      "60eaaaa747c8f40001732ac3",
+      "60ffec3a47c8f40001732ac8",
+      "6108f850d141f70001085458"
+     ],
+     "in": "path",
+     "name": "cardId",
+     "required": true,
+     "schema": {
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  },
+  "/customers": {
+   "get": {
+    "operationId": "2c97ffcb-a701-41f6-a679-4a092a98a792",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "_embedded": {
+          "customer": [
+           {
+            "_links": {
+             "addresses": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830af/addresses"
+             },
+             "cards": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830af/cards"
+             },
+             "customer": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830af"
+             },
+             "self": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830af"
+             }
+            },
+            "firstName": "Eve",
+            "id": "57a98d98e4b00679b4a830af",
+            "lastName": "Berger",
+            "username": "Eve_Berger"
+           },
+           {
+            "_links": {
+             "addresses": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830b2/addresses"
+             },
+             "cards": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830b2/cards"
+             },
+             "customer": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830b2"
+             },
+             "self": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830b2"
+             }
+            },
+            "firstName": "User",
+            "id": "57a98d98e4b00679b4a830b2",
+            "lastName": "Name",
+            "username": "user"
+           },
+           {
+            "_links": {
+             "addresses": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830b5/addresses"
+             },
+             "cards": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830b5/cards"
+             },
+             "customer": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830b5"
+             },
+             "self": {
+              "href": "http://user/customers/57a98d98e4b00679b4a830b5"
+             }
+            },
+            "firstName": "User1",
+            "id": "57a98d98e4b00679b4a830b5",
+            "lastName": "Name1",
+            "username": "user1"
+           }
+          ]
+         }
+        },
+        "schema": {
+         "properties": {
+          "_embedded": {
+           "properties": {
+            "customer": {
+             "items": {
+              "properties": {
+               "_links": {
+                "properties": {
+                 "addresses": {
+                  "properties": {
+                   "href": {
+                    "type": "string"
+                   }
+                  },
+                  "required": [
+                   "href"
+                  ],
+                  "type": "object"
+                 },
+                 "cards": {
+                  "properties": {
+                   "href": {
+                    "type": "string"
+                   }
+                  },
+                  "required": [
+                   "href"
+                  ],
+                  "type": "object"
+                 },
+                 "customer": {
+                  "properties": {
+                   "href": {
+                    "type": "string"
+                   }
+                  },
+                  "required": [
+                   "href"
+                  ],
+                  "type": "object"
+                 },
+                 "self": {
+                  "properties": {
+                   "href": {
+                    "type": "string"
+                   }
+                  },
+                  "required": [
+                   "href"
+                  ],
+                  "type": "object"
+                 }
+                },
+                "required": [
+                 "addresses",
+                 "cards",
+                 "customer",
+                 "self"
+                ],
+                "type": "object"
+               },
+               "firstName": {
+                "type": "string"
+               },
+               "id": {
+                "type": "string"
+               },
+               "lastName": {
+                "type": "string"
+               },
+               "username": {
+                "type": "string"
+               }
+              },
+              "required": [
+               "_links",
+               "firstName",
+               "id",
+               "lastName",
+               "username"
+              ],
+              "type": "object"
+             },
+             "type": "array"
+            }
+           },
+           "required": [
+            "customer"
+           ],
+           "type": "object"
+          }
+         },
+         "required": [
+          "_embedded"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 1 requests",
+    "tags": [
+     "customers"
+    ]
+   },
+   "parameters": []
+  },
+  "/customers/{customerId}": {
+   "get": {
+    "operationId": "014f3eac-30fe-4f28-977f-020b093b0192",
+    "parameters": [
+     {
+      "examples": [
+       "application/hal+json"
+      ],
+      "in": "header",
+      "name": "accept",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "135f6256a4593637",
+       "7339bfad929e5b67"
+      ],
+      "in": "header",
+      "name": "x-b3-parentspanid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "1"
+      ],
+      "in": "header",
+      "name": "x-b3-sampled",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "02cda9367e845413",
+       "f90e4bb854296b91"
+      ],
+      "in": "header",
+      "name": "x-b3-spanid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "4a1bdbc562d9e78f",
+       "1a7016ef43c58069"
+      ],
+      "in": "header",
+      "name": "x-b3-traceid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "http:/customers/6108f823d141f70001085456",
+       "http:/customers/57a98d98e4b00679b4a830b2",
+       "http:/customers/6131516f7c73880001e90ae3",
+       "http:/customers/6137e88c7c73880001e90ae7",
+       "http:/customers/61aa8ca40cb8f60001d7a805"
+      ],
+      "in": "header",
+      "name": "x-span-name",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "_links": {
+          "addresses": {
+           "href": "http://user/customers/57a98d98e4b00679b4a830b2/addresses"
+          },
+          "cards": {
+           "href": "http://user/customers/57a98d98e4b00679b4a830b2/cards"
+          },
+          "customer": {
+           "href": "http://user/customers/57a98d98e4b00679b4a830b2"
+          },
+          "self": {
+           "href": "http://user/customers/57a98d98e4b00679b4a830b2"
+          }
+         },
+         "firstName": "User",
+         "id": "57a98d98e4b00679b4a830b2",
+         "lastName": "Name",
+         "username": "user"
+        },
+        "schema": {
+         "properties": {
+          "_links": {
+           "properties": {
+            "addresses": {
+             "properties": {
+              "href": {
+               "type": "string"
+              }
+             },
+             "required": [
+              "href"
+             ],
+             "type": "object"
+            },
+            "cards": {
+             "properties": {
+              "href": {
+               "type": "string"
+              }
+             },
+             "required": [
+              "href"
+             ],
+             "type": "object"
+            },
+            "customer": {
+             "properties": {
+              "href": {
+               "type": "string"
+              }
+             },
+             "required": [
+              "href"
+             ],
+             "type": "object"
+            },
+            "self": {
+             "properties": {
+              "href": {
+               "type": "string"
+              }
+             },
+             "required": [
+              "href"
+             ],
+             "type": "object"
+            }
+           },
+           "required": [
+            "addresses",
+            "cards",
+            "customer",
+            "self"
+           ],
+           "type": "object"
+          },
+          "firstName": {
+           "type": "string"
+          },
+          "id": {
+           "type": "string"
+          },
+          "lastName": {
+           "type": "string"
+          },
+          "username": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "_links",
+          "firstName",
+          "id",
+          "lastName",
+          "username"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 1029 requests",
+    "tags": [
+     "customers"
+    ]
+   },
+   "parameters": [
+    {
+     "examples": [
+      "57a98d98e4b00679b4a830b2",
+      "608a02b557fae50001e7374f",
+      "608aba8157fae50001e73753",
+      "60eaaa8847c8f40001732ac2",
+      "60eed93747c8f40001732ac5"
+     ],
+     "in": "path",
+     "name": "customerId",
+     "required": true,
+     "schema": {
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  },
+  "/customers/{customerId}/addresses": {
+   "get": {
+    "operationId": "2b94734d-1675-43a2-b3d6-a5bb7069f094",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "_embedded": {
+          "address": [
+           {
+            "_links": {
+             "address": {
+              "href": "http://user/addresses/57a98d98e4b00679b4a830b0"
+             },
+             "self": {
+              "href": "http://user/addresses/57a98d98e4b00679b4a830b0"
+             }
+            },
+            "city": "Glasgow",
+            "country": "United Kingdom",
+            "id": "57a98d98e4b00679b4a830b0",
+            "number": "246",
+            "postcode": "G67 3DL",
+            "street": "Whitelees Road"
+           }
+          ]
+         }
+        },
+        "schema": {
+         "properties": {
+          "_embedded": {
+           "properties": {
+            "address": {
+             "items": {
+              "properties": {
+               "_links": {
+                "properties": {
+                 "address": {
+                  "properties": {
+                   "href": {
+                    "type": "string"
+                   }
+                  },
+                  "required": [
+                   "href"
+                  ],
+                  "type": "object"
+                 },
+                 "self": {
+                  "properties": {
+                   "href": {
+                    "type": "string"
+                   }
+                  },
+                  "required": [
+                   "href"
+                  ],
+                  "type": "object"
+                 }
+                },
+                "required": [
+                 "address",
+                 "self"
+                ],
+                "type": "object"
+               },
+               "city": {
+                "type": "string"
+               },
+               "country": {
+                "type": "string"
+               },
+               "id": {
+                "type": "string"
+               },
+               "number": {
+                "type": "string"
+               },
+               "postcode": {
+                "type": "string"
+               },
+               "street": {
+                "type": "string"
+               }
+              },
+              "required": [
+               "_links",
+               "city",
+               "country",
+               "id",
+               "number",
+               "postcode",
+               "street"
+              ],
+              "type": "object"
+             },
+             "type": "array"
+            }
+           },
+           "required": [
+            "address"
+           ],
+           "type": "object"
+          }
+         },
+         "required": [
+          "_embedded"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 370 requests",
+    "tags": [
+     "customers"
+    ]
+   },
+   "parameters": [
+    {
+     "examples": [
+      "57a98d98e4b00679b4a830b2",
+      "608a02b557fae50001e7374f",
+      "608aba8157fae50001e73753",
+      "60eaaa8847c8f40001732ac2",
+      "60eed93747c8f40001732ac5"
+     ],
+     "in": "path",
+     "name": "customerId",
+     "required": true,
+     "schema": {
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  },
+  "/customers/{customerId}/cards": {
+   "get": {
+    "operationId": "efa2c341-3cb8-4710-a575-93f6eccff110",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "_embedded": {
+          "card": [
+           {
+            "_links": {
+             "card": {
+              "href": "http://user/cards/57a98d98e4b00679b4a830b1"
+             },
+             "self": {
+              "href": "http://user/cards/57a98d98e4b00679b4a830b1"
+             }
+            },
+            "ccv": "958",
+            "expires": "08/19",
+            "id": "57a98d98e4b00679b4a830b1",
+            "longNum": "5544154011345918"
+           }
+          ]
+         }
+        },
+        "schema": {
+         "properties": {
+          "_embedded": {
+           "properties": {
+            "card": {
+             "items": {
+              "properties": {
+               "_links": {
+                "properties": {
+                 "card": {
+                  "properties": {
+                   "href": {
+                    "type": "string"
+                   }
+                  },
+                  "required": [
+                   "href"
+                  ],
+                  "type": "object"
+                 },
+                 "self": {
+                  "properties": {
+                   "href": {
+                    "type": "string"
+                   }
+                  },
+                  "required": [
+                   "href"
+                  ],
+                  "type": "object"
+                 }
+                },
+                "required": [
+                 "card",
+                 "self"
+                ],
+                "type": "object"
+               },
+               "ccv": {
+                "type": "string"
+               },
+               "expires": {
+                "type": "string"
+               },
+               "id": {
+                "type": "string"
+               },
+               "longNum": {
+                "type": "string"
+               }
+              },
+              "required": [
+               "_links",
+               "ccv",
+               "expires",
+               "id",
+               "longNum"
+              ],
+              "type": "object"
+             },
+             "type": "array"
+            }
+           },
+           "required": [
+            "card"
+           ],
+           "type": "object"
+          }
+         },
+         "required": [
+          "_embedded"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 371 requests",
+    "tags": [
+     "customers"
+    ]
+   },
+   "parameters": [
+    {
+     "examples": [
+      "57a98d98e4b00679b4a830b2",
+      "608a02b557fae50001e7374f",
+      "608aba8157fae50001e73753",
+      "60eaaa8847c8f40001732ac2",
+      "60eed93747c8f40001732ac5"
+     ],
+     "in": "path",
+     "name": "customerId",
+     "required": true,
+     "schema": {
+      "type": "string"
+     },
+     "style": "simple"
+    }
+   ]
+  },
+  "/login": {
+   "get": {
+    "operationId": "1f3181e1-758a-4ecc-a6b0-52a465a1fe71",
+    "parameters": [],
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "user": {
+          "_links": {
+           "addresses": {
+            "href": "http://user/customers/57a98d98e4b00679b4a830b2/addresses"
+           },
+           "cards": {
+            "href": "http://user/customers/57a98d98e4b00679b4a830b2/cards"
+           },
+           "customer": {
+            "href": "http://user/customers/57a98d98e4b00679b4a830b2"
+           },
+           "self": {
+            "href": "http://user/customers/57a98d98e4b00679b4a830b2"
+           }
+          },
+          "firstName": "User",
+          "id": "57a98d98e4b00679b4a830b2",
+          "lastName": "Name",
+          "username": "user"
+         }
+        },
+        "schema": {
+         "properties": {
+          "user": {
+           "properties": {
+            "_links": {
+             "properties": {
+              "addresses": {
+               "properties": {
+                "href": {
+                 "type": "string"
+                }
+               },
+               "required": [
+                "href"
+               ],
+               "type": "object"
+              },
+              "cards": {
+               "properties": {
+                "href": {
+                 "type": "string"
+                }
+               },
+               "required": [
+                "href"
+               ],
+               "type": "object"
+              },
+              "customer": {
+               "properties": {
+                "href": {
+                 "type": "string"
+                }
+               },
+               "required": [
+                "href"
+               ],
+               "type": "object"
+              },
+              "self": {
+               "properties": {
+                "href": {
+                 "type": "string"
+                }
+               },
+               "required": [
+                "href"
+               ],
+               "type": "object"
+              }
+             },
+             "required": [
+              "addresses",
+              "cards",
+              "customer",
+              "self"
+             ],
+             "type": "object"
+            },
+            "firstName": {
+             "type": "string"
+            },
+            "id": {
+             "type": "string"
+            },
+            "lastName": {
+             "type": "string"
+            },
+            "username": {
+             "type": "string"
+            }
+           },
+           "required": [
+            "_links",
+            "firstName",
+            "id",
+            "lastName",
+            "username"
+           ],
+           "type": "object"
+          }
+         },
+         "required": [
+          "user"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 319 requests"
+   },
+   "parameters": []
+  },
+  "/register": {
+   "parameters": [],
+   "post": {
+    "operationId": "c35daf06-96b9-49fc-a0d8-ecf0e3ff36b9",
+    "parameters": [
+     {
+      "examples": [
+       "application/json"
+      ],
+      "in": "header",
+      "name": "accept",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "properties": {
+         "email": {
+          "type": "string"
+         },
+         "firstName": {
+          "type": "string"
+         },
+         "lastName": {
+          "type": "string"
+         },
+         "password": {
+          "type": "string"
+         },
+         "username": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "email",
+         "firstName",
+         "lastName",
+         "password",
+         "username"
+        ],
+        "type": "object"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "id": "608a02b557fae50001e7374f"
+        },
+        "schema": {
+         "properties": {
+          "id": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "id"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 14 requests"
+   }
+  }
+ },
+ "tags": [
+  {
+   "name": "customers"
+  },
+  {
+   "name": "cards"
+  },
+  {
+   "name": "addresses"
+  }
+ ]
+}

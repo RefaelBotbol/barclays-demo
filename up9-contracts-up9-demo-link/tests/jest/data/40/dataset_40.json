@@ -1,0 +1,22 @@
+{
+ "parameters": [
+  {
+   "name": "bs_real_ip",
+   "uuid": "33953530-e984-4bf1-b444-b3df05dcba51"
+  },
+  {
+   "name": "param",
+   "uuid": "ec18539c-bb04-4530-a234-94133af52c10"
+  }
+ ],
+ "rows": [
+  {
+   "bs_real_ip": "TmpBdU1Ua3hMakV5TlM0ek5RPT0=",
+   "param": "navbar.html"
+  },
+  {
+   "bs_real_ip": "TmpBdU1Ua3hMakV5TlM0ek5RPT0=",
+   "param": "112.124.42.80:63435"
+  }
+ ]
+}

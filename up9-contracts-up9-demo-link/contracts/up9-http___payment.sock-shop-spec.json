@@ -1,0 +1,222 @@
+{
+ "info": {
+  "title": "http://payment.sock-shop - refael up9-demo-link all",
+  "version": "0.0.124"
+ },
+ "openapi": "3.1.0",
+ "paths": {
+  "/paymentAuth": {
+   "parameters": [],
+   "post": {
+    "operationId": "50cc75be-0996-4bcd-9aa7-64198a5e9ea7",
+    "parameters": [
+     {
+      "examples": [
+       "application/json"
+      ],
+      "in": "header",
+      "name": "accept",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "484778133e3429d4",
+       "2c64c367756c6f3d"
+      ],
+      "in": "header",
+      "name": "x-b3-parentspanid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "1"
+      ],
+      "in": "header",
+      "name": "x-b3-sampled",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "6c769fb79c1a9109",
+       "4b88e7c0e3fed4a2"
+      ],
+      "in": "header",
+      "name": "x-b3-spanid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "4a1bdbc562d9e78f",
+       "1a7016ef43c58069"
+      ],
+      "in": "header",
+      "name": "x-b3-traceid",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     },
+     {
+      "examples": [
+       "http:/paymentAuth"
+      ],
+      "in": "header",
+      "name": "x-span-name",
+      "required": false,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "requestBody": {
+     "content": {
+      "application/json": {
+       "schema": {
+        "properties": {
+         "address": {
+          "properties": {
+           "city": {
+            "type": "string"
+           },
+           "country": {
+            "type": "string"
+           },
+           "id": {
+            "type": "null"
+           },
+           "number": {
+            "type": "string"
+           },
+           "postcode": {
+            "type": "string"
+           },
+           "street": {
+            "type": "string"
+           }
+          },
+          "required": [
+           "city",
+           "country",
+           "id",
+           "number",
+           "postcode",
+           "street"
+          ],
+          "type": "object"
+         },
+         "amount": {
+          "type": "number"
+         },
+         "card": {
+          "properties": {
+           "ccv": {
+            "type": "string"
+           },
+           "expires": {
+            "type": "string"
+           },
+           "id": {
+            "type": "null"
+           },
+           "longNum": {
+            "type": "string"
+           }
+          },
+          "required": [
+           "ccv",
+           "expires",
+           "id",
+           "longNum"
+          ],
+          "type": "object"
+         },
+         "customer": {
+          "properties": {
+           "addresses": {
+            "type": "array"
+           },
+           "cards": {
+            "type": "array"
+           },
+           "firstName": {
+            "type": "string"
+           },
+           "id": {
+            "type": "null"
+           },
+           "lastName": {
+            "type": "string"
+           },
+           "username": {
+            "type": "string"
+           }
+          },
+          "required": [
+           "addresses",
+           "cards",
+           "firstName",
+           "id",
+           "lastName",
+           "username"
+          ],
+          "type": "object"
+         }
+        },
+        "required": [
+         "address",
+         "amount",
+         "card",
+         "customer"
+        ],
+        "type": "object"
+       }
+      }
+     },
+     "required": true
+    },
+    "responses": {
+     "200": {
+      "content": {
+       "application/json": {
+        "example": {
+         "authorised": true,
+         "message": "Payment authorised"
+        },
+        "schema": {
+         "properties": {
+          "authorised": {
+           "type": "boolean"
+          },
+          "message": {
+           "type": "string"
+          }
+         },
+         "required": [
+          "authorised",
+          "message"
+         ],
+         "type": "object"
+        }
+       }
+      },
+      "description": "OK"
+     }
+    },
+    "summary": "Seen 1368 requests"
+   }
+  }
+ },
+ "tags": []
+}

@@ -1,0 +1,23 @@
+{
+ "parameters": [
+  {
+   "name": "amp_cache_transform",
+   "uuid": "983a3ae3-2a6c-48fc-a0a3-278e88df7bcc"
+  },
+  {
+   "name": "findcli",
+   "uuid": "7372c0de-6dbe-4f9a-96b6-d2165a35c2b0"
+  },
+  {
+   "name": "postman_token",
+   "uuid": "43460105-0193-4c46-82f2-65150bbcab1c"
+  }
+ ],
+ "rows": [
+  {
+   "amp_cache_transform": "google;v=\"1..8\"",
+   "findcli": "-1",
+   "postman_token": "f8fb8602-2a13-4807-b91b-32a99547bf5e"
+  }
+ ]
+}

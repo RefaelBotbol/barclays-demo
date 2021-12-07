@@ -1,0 +1,55 @@
+{
+ "mappings": [
+  {
+   "id": "fce03aaa-9806-44b2-93d6-4c6714dbf18d",
+   "request": {
+    "method": "POST",
+    "urlPathPattern": "/orders"
+   },
+   "response": {
+    "bodyFileName": "resp_26.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 201,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "3c48730e-6521-4226-80e3-698ab93bb26b",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/orders/[^/]+"
+   },
+   "response": {
+    "bodyFileName": "resp_87.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  },
+  {
+   "id": "4a7aea52-3a8e-4258-af51-e7a96d4d1d40",
+   "request": {
+    "method": "GET",
+    "urlPathPattern": "/orders/search/customerId"
+   },
+   "response": {
+    "bodyFileName": "resp_88.json",
+    "headers": {
+     "Content-Type": "application/json"
+    },
+    "status": 200,
+    "transformers": [
+     "response-template"
+    ]
+   }
+  }
+ ]
+}
